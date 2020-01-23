@@ -8,8 +8,8 @@ Parameters:
 
   EksClusterName:
     Type: String
-    Description: The name of the EKS cluster created
-    Default: 
+    Description: The name of the EKS cluster 
+    Default: try-eks
     MinLength: 1
     MaxLength: 100
     ConstraintDescription: You must enter the EKS cluster name
@@ -17,14 +17,14 @@ Parameters:
   GitSourceRepo:
     Type: String
     Description: GitHub source repository - must contain a Dockerfile and buildspec.yml in the base
-    Default: 
+    Default: Deploy-Flask-App-to-Kubernetes-Using-EKS
     MinLength: 1
     MaxLength: 100
     ConstraintDescription: You must enter a GitHub repository name
 
   GitBranch:
     Type: String
-    Default: master
+    Default: develop
     Description: GitHub git repository branch - change triggers a new build
     MinLength: 1
     MaxLength: 100
@@ -40,7 +40,7 @@ Parameters:
 
   GitHubUser:
     Type: String
-    Default:
+    Default: philipotieno
     Description: GitHub username or organization
     MinLength: 3
     MaxLength: 100
@@ -56,7 +56,7 @@ Parameters:
 
   KubectlRoleName:
     Type: String
-    Default: 
+    Default: UdacityFlaskDeployCBKubectlRole
     Description: IAM role used by kubectl to interact with EKS cluster
     MinLength: 3
     MaxLength: 100
