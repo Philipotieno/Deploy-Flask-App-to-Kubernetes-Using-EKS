@@ -1,0 +1,2 @@
+JWT_SECRET='some-very-long-string-of-random-characters-CHANGE-TO-YOUR-LIKING'
+LOG_LEVEL=DEBUG
